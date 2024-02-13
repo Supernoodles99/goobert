@@ -21,8 +21,7 @@
       function goobert(){
         watch.innerText = text1.concat(String(getnewtime()), " seconds.")
         if (getnewtime() % 100 == 0) {
-          let audio = new Audio("sounds/ding.wav");
-          audio.play();
+        // man i hate autoplay restriction goofiness
         }
         requestAnimationFrame(goobert)
       }
