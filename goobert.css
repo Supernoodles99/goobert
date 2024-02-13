@@ -17,3 +17,7 @@ h1 {
   font-size: 50px;
   color: adffad;
 }
+#watch {
+  background-color: rgba(0, 0, 0, 40%);
+  font-size: 150%
+}
