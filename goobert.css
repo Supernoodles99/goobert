@@ -3,3 +3,16 @@ body {
   font-family: Consolas, "courier new";
   color: white;
 }
+@keyframes spin {
+  0% {transform: rotate(0deg);}
+  50% {transform: rotate(180deg);}
+  100% {transform: rotate(360deg);}
+}
+#goobert {
+  margin: 5em;
+  animation: spin 0.7s linear infinite;
+}
+h1 {
+  letter-spacing: 5px;
+  font-size: 50px;
+}
