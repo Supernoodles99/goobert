@@ -9,19 +9,18 @@
     <center>
       <h1>TEMPLE OF GOOBERT</h1>
       <img src="images/goobert.png" id="goobert"><br>
-      <div id="watch">You have been watching goobert for 0 seconds.</div>
+      <div id="watch">You have been watching goobert for <span id="numbercounter">0</span> seconds.</div>
     </center>
     <script>
-      const watch = document.getElementById("watch");
+      const count = document.getElementById("numbercounter");
       const starttime = Date.now();
       function getnewtime() {
         return Math.floor((Date.now() - starttime) / 1000);
       }
-      const text1 = "You have been watching goobert for "
       function goobert(){
-        watch.innerText = text1.concat(String(getnewtime()), " seconds.")
+        count.innerText = getnewtime()
         if (getnewtime() % 100 == 0) {
-        // man i hate autoplay restriction goofiness
+        
         }
         requestAnimationFrame(goobert)
       }
