@@ -1,7 +1,7 @@
 body {
   background-color: #232356;
   font-family: Consolas, "courier new";
-  color: white;
+  color: #ffffff;
 }
 @keyframes spin {
   0% {transform: rotate(0deg);}
