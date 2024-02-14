@@ -14,18 +14,12 @@
     </center>
     <script>
       const count = document.getElementById("numbercounter");
-      const starttime = Date.now();
-      function getnewtime() {
-        return Math.floor((Date.now() - starttime) / 1000);
+      let i = 0;
+      function goobert() {
+        i++;
+        count.innerText = i;
       }
-      function goobert(){
-        count.innerText = getnewtime()
-        if (getnewtime() % 100 == 0) {
-        
-        }
-        requestAnimationFrame(goobert)
-      }
-      requestAnimationFrame(goobert)
+      setInterval(goobert, 1000);
     </script>
   </body>
 </html>
