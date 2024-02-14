@@ -21,3 +21,10 @@ h1 {
   background-color: rgba(0, 0, 0, 40%);
   font-size: 150%
 }
+button {
+  margin: 3em;
+  font-family: Consolas, "courier new";
+  background-color: #234523;
+  color: #ffffff;
+  border-radius: 0.8em;
+}
