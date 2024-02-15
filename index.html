@@ -9,15 +9,21 @@
     <center>
       <h1>TEMPLE OF GOOBERT</h1>
       <img src="images/goobert.png" id="goobert"><br>
-      <div id="watch">You have been watching goobert for <span id="numbercounter">0</span> seconds.</div>
+      <div id="watch">You have been watching goobert for <span id="numbercounter">0</span> seconds.<br>
+      You are <span id="level">a Jr. goobert watcher</span></div>
       <button>click here for sound (unfinished)</button>
     </center>
     <script>
       const count = document.getElementById("numbercounter");
+      const leveltext = document.getElementById("level");
+      const levels = {5:"a Sr. goobert watcher",10:"a Jr. goobert enjoyer",20:"a Sr. goobert enjoyer",50:"a Jr. goobert admirer",75:"a Sr. goobert admirer",100:"a goobert honorer",180:"an Ultimate goobert honorer"};
       let i = 0;
       function goobert() {
         i++;
         count.innerText = i;
+        if (levels[i]) {
+          leveltext.innerText = levels[i]
+        }
       }
       setInterval(goobert, 1000);
     </script>
