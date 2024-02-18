@@ -11,9 +11,25 @@
       <img src="images/goobert.png" id="goobert"><br>
       <div id="watch">You have been watching goobert for <span id="numbercounter">0</span> seconds.<br>
       You are <span id="level">a Jr. goobert watcher</span>.</div>
-      <button>click here for sound (unfinished)</button>
+      <button id="soundbutton">click here for sound (unfinished)</button>
     </center>
     <script>
+      var intervalID;
+      
+      document.getElementById("soundButton").addEventListener("click", function() {
+          startInterval();
+      });
+
+      function startInterval() {
+          playSound();
+          intervalID = setInterval(playSound, 5000); // change 5000 to 30000
+      }
+
+      function playSound() {
+          var audio = new Audio('https://notfenixio.is-a.dev/phone/boom.mp3');
+          audio.play();
+      }
+      
       const count = document.getElementById("numbercounter");
       const leveltext = document.getElementById("level");
       const levels = {5:"a Sr. goobert watcher",10:"a Jr. goobert enjoyer",20:"a Sr. goobert enjoyer",50:"a Jr. goobert admirer",75:"a Sr. goobert admirer",100:"a goobert honorer",180:"an Ultimate goobert honorer"};
